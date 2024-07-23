@@ -104,7 +104,7 @@ set(ApproxMVBB_XML_SUPPORT OFF CACHE BOOL "Build library with XML support.")
 #=======================================================================
 
 # Dependencies =========================================================
-find_package(Eigen3 CONFIG REQUIRED)
+find_package(Eigen3 REQUIRED)
 add_library(eigenLib INTERFACE IMPORTED)
 set_property(TARGET eigenLib PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${EIGEN3_INCLUDE_DIR})
 list(APPEND ApproxMVBB_LIBS_DEP_PUBLIC eigenLib)
